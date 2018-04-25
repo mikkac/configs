@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/inc/generator.h
+random.h
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/inc/random.h
+experimental/optional
+-
+istream
+-
+unordered_map
+-
+vector
+-
+
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/inc/random.h
+
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/inc/realrandom.h
+random.h
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/inc/random.h
+random
+-
+
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/src/main.cpp
+../inc/generator.h
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/inc/generator.h
+../inc/realrandom.h
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/inc/realrandom.h
+iostream
+-
+sstream
+-
+

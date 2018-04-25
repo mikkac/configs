@@ -1,0 +1,11 @@
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/build/CMakeFiles/edit_cache.dir
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/build/CMakeFiles/rebuild_cache.dir
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/build/CMakeFiles/main_project-tidy.dir
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/build/CMakeFiles/generator.dir
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/build/CMakeFiles/main_project-format.dir
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/build/CMakeFiles/main_project.dir
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/build/tests/CMakeFiles/edit_cache.dir
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/build/tests/CMakeFiles/rebuild_cache.dir
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/build/tests/CMakeFiles/generatorTests-tidy.dir
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/build/tests/CMakeFiles/generatorTests.dir
+/home/kaczmmik/repos/incubator/cpp/kaczmmik/exc_03_generator/build/tests/CMakeFiles/generatorTests-format.dir
