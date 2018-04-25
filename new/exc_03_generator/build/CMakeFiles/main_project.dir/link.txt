@@ -1,1 +1,0 @@
-/usr/bin/c++    -Wall -Wno-long-long -pedantic   CMakeFiles/main_project.dir/src/main.cpp.o CMakeFiles/generator.dir/src/generator.cpp.o CMakeFiles/generator.dir/src/realrandom.cpp.o  -o main_project 
