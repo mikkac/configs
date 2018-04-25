@@ -17,7 +17,14 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'lifepillar/vim-mucomplete'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-vinegar'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Shougo/denite.nvim'
+Plugin 'Shuogo/vimfiler.vim'
+Plugin 'mhinz/vim-stratify'
+Plugin 'thnica/vim-ref'
+Plugin 'mhinz/vim-grepper'
+
 
 "cpp highlighter
 let g:cpp_class_scope_highlight = 1
@@ -43,7 +50,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-Wall -std=c++14 '
+let g:syntastic_cpp_compiler_options = '-Werror -Weverything -pedantic -Wall -std=c++14 '
 
 " set UTF-8 encoding
 set enc=utf-8
@@ -65,7 +72,10 @@ set textwidth=120
 " turn syntax highlighting on
 set t_Co=256
 syntax on
-colorscheme pablo
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 " turn line numbers on
 set number
 " highlight matching braces
