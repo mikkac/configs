@@ -16,16 +16,22 @@ filetype plugin indent on
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'lifepillar/vim-mucomplete'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'tpope/vim-vinegar'
+"Plugin 'tpope/vim-vinegar'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Shougo/denite.nvim'
-Plugin 'Shuogo/vimfiler.vim'
-Plugin 'mhinz/vim-stratify'
-Plugin 'thnica/vim-ref'
-Plugin 'mhinz/vim-grepper'
+"Plugin 'Shuogo/vimfiler.vim'
+"Plugin 'mhinz/vim-stratify'
+"Plugin 'thnica/vim-ref'
+"Plugin 'mhinz/vim-grepper'
 
-
+"nerdtree
+autocmd StdinReadPre * let s:std_in=1
+autocmd vimenter * NERDTree
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+map <F3> :NERDTreeToggle<CR>
 "cpp highlighter
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
@@ -49,8 +55,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-Werror -Weverything -pedantic -Wall -std=c++14 '
+let g:syntastic_cpp_compiler = "clang++"
+let g:syntastic_cpp_compiler_options = "-Werror -pedantic -Wall -std=c++1z"
 
 " set UTF-8 encoding
 set enc=utf-8
@@ -73,7 +79,7 @@ set textwidth=120
 set t_Co=256
 syntax on
 syntax enable
-set background=dark
+set background=light
 let g:solarized_termcolors=256
 colorscheme solarized
 " turn line numbers on
