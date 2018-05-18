@@ -18,14 +18,16 @@ Plugin 'lifepillar/vim-mucomplete'
 Plugin 'vim-syntastic/syntastic'
 "Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Shougo/denite.nvim'
 "Plugin 'Shuogo/vimfiler.vim'
 "Plugin 'mhinz/vim-stratify'
 "Plugin 'thnica/vim-ref'
 "Plugin 'mhinz/vim-grepper'
+Plugin 'nvie/vim-togglemouse'
 
 "nerdtree
 autocmd StdinReadPre * let s:std_in=1
@@ -37,6 +39,27 @@ let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 let g:cpp_experimental_simple_template_highlight = 1
+"nerdcommenter
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 10
+"
+" " Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" " Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" " Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" " Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+"
+" " Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" " Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
 
 " mucomplete
 set completeopt+=menuone
@@ -79,9 +102,7 @@ set textwidth=120
 set t_Co=256
 syntax on
 syntax enable
-set background=light
-let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme blackboard 
 " turn line numbers on
 set number
 " highlight matching braces
@@ -98,7 +119,7 @@ set tags+=~/.vim/tags/sdl
 set tags+=~/.vim/tags/qt4
 
 " Install DoxygenToolkit from http://www.vim.org/scripts/script.php?script_id=987
-let g:DoxygenToolkit_authorName="John Doe <john@doe.com>"
+let g:DoxygenToolkit_authorName="Mikolaj Kaczmarek <mikolaj.kaczmarek@tieto.com>"
 
 " Enhanced keyboard mappings
 "
@@ -117,20 +138,4 @@ map <F7> :make<CR>
 " build using makeprg with <S-F7>
 map <S-F7> :make clean all<CR>
 " goto definition with F12
-map <F12> <C-]>
-" in diff mode we use the spell check keys for merging
-if &diff
-  ” diff settings
-  map <M-Down> ]c
-  map <M-Up> [c
-  map <M-Left> do
-  map <M-Right> dp
-  map <F9> :new<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>gg
-else
-  " spell settings
-  :setlocal spell spelllang=en
-  " set the spellfile - folders must exist
-  set spellfile=~/.vim/spellfile.add
-  map <M-Down> ]s
-  map <M-Up> [s
-endif
+map <F11> <C-]>
