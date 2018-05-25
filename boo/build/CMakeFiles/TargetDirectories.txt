@@ -1,0 +1,5 @@
+/home/kaczmmik/ex/boost_ex/build/CMakeFiles/rebuild_cache.dir
+/home/kaczmmik/ex/boost_ex/build/CMakeFiles/edit_cache.dir
+/home/kaczmmik/ex/boost_ex/build/CMakeFiles/mainProject-tidy.dir
+/home/kaczmmik/ex/boost_ex/build/CMakeFiles/mainProject.dir
+/home/kaczmmik/ex/boost_ex/build/CMakeFiles/mainProject-format.dir

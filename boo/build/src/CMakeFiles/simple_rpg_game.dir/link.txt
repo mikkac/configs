@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsimple_rpg_game.a  CMakeFiles/simple_rpg_game.dir/main.cpp.o
+/usr/bin/ranlib libsimple_rpg_game.a

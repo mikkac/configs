@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kaczmmik/ex/boost_ex/src/main.cpp
+boost/lambda/lambda.hpp
+-
+iostream
+-
+iterator
+-
+algorithm
+-
+
