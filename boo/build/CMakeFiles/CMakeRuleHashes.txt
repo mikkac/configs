@@ -1,3 +1,0 @@
-# Hashes of file build rules.
-4cfde61ddec4f5a523b63f37cc081532 CMakeFiles/mainProject-format
-2911fa298680e7bfa9246094773ff5e0 CMakeFiles/mainProject-tidy

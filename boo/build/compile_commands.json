@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/kaczmmik/ex/boost_ex/build",
-  "command": "/usr/bin/c++   -isystem /usr/local/include   -Wall -O3 -Wextra -pedantic   -std=gnu++1z -o CMakeFiles/mainProject.dir/src/main.cpp.o -c /home/kaczmmik/ex/boost_ex/src/main.cpp",
-  "file": "/home/kaczmmik/ex/boost_ex/src/main.cpp"
-}
-]
