@@ -16,11 +16,9 @@ filetype plugin indent on
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'lifepillar/vim-mucomplete'
 Plugin 'vim-syntastic/syntastic'
-"Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-"Plugin 'altercation/vim-colors-solarized'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Shougo/denite.nvim'
 "Plugin 'Shuogo/vimfiler.vim'
@@ -102,7 +100,7 @@ set textwidth=120
 set t_Co=256
 syntax on
 syntax enable
-colorscheme blackboard 
+colorscheme atomified 
 " turn line numbers on
 set number
 " highlight matching braces
@@ -133,9 +131,30 @@ map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 map <F5> :!ctags -R –c++-kinds=+p –fields=+iaS –extra=+q .<CR>
 " create doxygen comment
 map <F6> :Dox<CR>
-" build using makeprg with <F7>
-map <F7> :make<CR>
-" build using makeprg with <S-F7>
-map <S-F7> :make clean all<CR>
 " goto definition with F12
 map <F11> <C-]>
+"Buffers"
+    "Create a new buffer"
+nnoremap <C-n> :enew<CR>\t
+    "Moving around"
+nnoremap <F7> :bprevious<CR>
+nnoremap <F8> :bnext<CR>
+    "Close Buffer"
+nnoremap <F9> :bd<CR>
+" change leader key
+let mapleader = ","
+"Moving line"
+    "With arrows"
+nnoremap <S-Up> :m -2<CR>
+nnoremap <S-Down> :m +1<CR>
+inoremap <S-Up> <Esc>:m -2<CR><A>
+inoremap <S-Down> <Esc>:m +1<CR><A>
+    "With J and K in a normal mode"
+nnoremap <S-j> :m +1<CR>
+nnoremap <S-k> :m -2<CR>
+"Insert new line in a normal mode"
+nmap <CR> o<Esc>
+"Copy and replace word. Copy with ctrl+x and replace word with ctrl+v
+nnoremap <C-x> "hyiw
+nnoremap <C-v> diwh"hp
+
