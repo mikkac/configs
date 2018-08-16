@@ -18,7 +18,7 @@ call vundle#end()
 filetype plugin indent on
 
 Plugin 'octol/vim-cpp-enhanced-highlight' " highlighting code 
-Plugin 'Valloric/YouCompleteMe' " code completion
+"Plugin 'Valloric/YouCompleteMe' " code completion
     " allow semantic support for C-family languages:
     " $ cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer
 Plugin 'Rip-Rip/clang_complete'
@@ -42,7 +42,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 map <C-o> :NERDTreeToggle<CR>
  
 " Valloric/YouCompleteMe ++++++++++++++++++++++++++++++++++++++++++++
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 "
 " Rip-Rip/clang_complete ++++++++++++++++++++++++++++++++++++++++++++
 let g:clang_library_path = '/usr/lib/llvm-6.0/lib/libclang-6.0.so.1'
