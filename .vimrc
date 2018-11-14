@@ -4,8 +4,8 @@
 " Description: Optimized for C/C++ development
 " Author: Mikolaj Kaczmarek
 
-set background=light
-colorscheme MountainDew 
+set background=dark
+colorscheme radicalgoodspeed 
 
 " additional plugins
 
@@ -42,8 +42,9 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 map <C-o> :NERDTreeToggle<CR>
  
 " Valloric/YouCompleteMe ++++++++++++++++++++++++++++++++++++++++++++
-"let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-"
+" let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+" let g:ycm_show_diagnostics_ui = 0
+
 " Rip-Rip/clang_complete ++++++++++++++++++++++++++++++++++++++++++++
 let g:clang_library_path = '/usr/lib/llvm-6.0/lib/libclang-6.0.so.1'
 
@@ -132,9 +133,6 @@ nmap <F2> :w<CR>
 " in insert mode F2 will exit insert, save, enters insert again
 imap <F2> <ESC>:w<CR>i
 
-" switch between header/source with F4
-map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
-
 "Buffers"
     "Create a new buffer"
 nnoremap <C-n> :enew<CR>\t
@@ -143,6 +141,9 @@ nnoremap <F7> :bprevious<CR>
 nnoremap <F8> :bnext<CR>
     "Close Buffer"
 nnoremap <F9> :bd<CR>
+
+"Delete all trailing whitespaces
+nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 "Moving line"
     "With arrows"
@@ -156,10 +157,6 @@ nnoremap <S-k> :m -2<CR>
 
 "Insert new line in a normal mode"
 nmap <CR> o<Esc>
-
-"Copy and replace word. Copy with ctrl+x and replace word with ctrl+v
-nnoremap <C-x> "hyiw
-nnoremap <C-v> diwh"hp
 
 " open .vimrc
 nnoremap <leader>ev :split $MYVIMRC<CR>
