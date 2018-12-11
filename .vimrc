@@ -32,6 +32,7 @@ Plugin 'tpope/vim-surround' "  wrap selected region in brackets
 Plugin 'airblade/vim-gitgutter' " indicating which lines changed in the file since last Git revision
 Plugin 'flazz/vim-colorschemes' " pack with schemes
 Plugin 'wincent/terminus' " cursors
+Plugin 'ap/vim-buftabline' " tabs
 
 "scrooloose/nerdtree ++++++++++++++++++++++++++++++++++++++++++++++++
 autocmd vimenter * NERDTree " starts NERDTree on vim start up
@@ -79,6 +80,11 @@ let g:lightline = {
   \         'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding']]
   \     }
   \ }
+
+" ap/vim-buftabline ++++++++++++++++++++++++++++++++++++++++++++++++
+set hidden
+nnoremap <F8> :bnext<CR>
+nnoremap <F7-tab> :bprev<CR>
 
 " Editor settings +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
@@ -138,8 +144,8 @@ imap <F2> <ESC>:w<CR>i
     "Create a new buffer"
 nnoremap <C-n> :enew<CR>\t
     "Moving around"
-nnoremap <F7> :bprevious<CR>
-nnoremap <F8> :bnext<CR>
+" nnoremap <F7> :bprevious<CR>
+" nnoremap <F8> :bnext<CR>
     "Close Buffer"
 nnoremap <F9> :bd<CR>
 
