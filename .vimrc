@@ -4,12 +4,9 @@
 " Description: Optimized for C/C++ development
 " Author: Mikolaj Kaczmarek
 
-if has("gui_win32")
-    set guifont=Consolas:h14
-endif
-
 set background=dark
 colorscheme radicalgoodspeed 
+
 " additional plugins
 
 set nocompatible
@@ -21,7 +18,6 @@ call vundle#end()
 filetype plugin indent on
 
 Plugin 'octol/vim-cpp-enhanced-highlight' " highlighting code 
-Plugin 'idbrii/vim-unreal'
 "Plugin 'Valloric/YouCompleteMe' " code completion
     " allow semantic support for C-family languages:
     " $ cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer
@@ -35,6 +31,7 @@ Plugin 'itchyny/lightline.vim' " fancy statusline (NORMAL/INSERT etc)
 Plugin 'tpope/vim-surround' "  wrap selected region in brackets
 Plugin 'airblade/vim-gitgutter' " indicating which lines changed in the file since last Git revision
 Plugin 'flazz/vim-colorschemes' " pack with schemes
+Plugin 'wincent/terminus' " cursors
 
 "scrooloose/nerdtree ++++++++++++++++++++++++++++++++++++++++++++++++
 autocmd vimenter * NERDTree " starts NERDTree on vim start up
@@ -46,8 +43,9 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 map <C-o> :NERDTreeToggle<CR>
  
 " Valloric/YouCompleteMe ++++++++++++++++++++++++++++++++++++++++++++
-"let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-"
+" let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+" let g:ycm_show_diagnostics_ui = 0
+
 " Rip-Rip/clang_complete ++++++++++++++++++++++++++++++++++++++++++++
 let g:clang_library_path = '/usr/lib/llvm-6.0/lib/libclang-6.0.so.1'
 
