@@ -18,7 +18,7 @@ call vundle#end()
 filetype plugin indent on
 
 Plugin 'octol/vim-cpp-enhanced-highlight' " highlighting code 
-"Plugin 'Valloric/YouCompleteMe' " code completion
+Plugin 'Valloric/YouCompleteMe' " code completion
     " allow semantic support for C-family languages:
     " $ cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer
 Plugin 'Rip-Rip/clang_complete'
@@ -33,6 +33,7 @@ Plugin 'airblade/vim-gitgutter' " indicating which lines changed in the file sin
 Plugin 'flazz/vim-colorschemes' " pack with schemes
 Plugin 'wincent/terminus' " cursors
 Plugin 'ap/vim-buftabline' " tabs
+Plugin 'rhysd/vim-clang-format' " clang-format
 
 "scrooloose/nerdtree ++++++++++++++++++++++++++++++++++++++++++++++++
 autocmd vimenter * NERDTree " starts NERDTree on vim start up
@@ -85,6 +86,12 @@ let g:lightline = {
 set hidden
 nnoremap <F8> :bnext<CR>
 nnoremap <F7-tab> :bprev<CR>
+
+" clang-format +++++++++++++++++++++++++++++++++++++++++++++++++++++
+let g:clang_format#detect_style_file=1
+nmap <Leader>F :ClangFormatAutoToggle<CR>
+nnoremap <F12> :<C-u>ClangFormat<CR>
+vnoremap <F12> :ClangFormat<CR>
 
 " Editor settings +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
