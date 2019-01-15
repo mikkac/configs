@@ -5,7 +5,7 @@
 " Author: Mikolaj Kaczmarek
 
 set background=dark
-colorscheme radicalgoodspeed 
+colorscheme *
 
 " additional plugins
 
@@ -85,7 +85,9 @@ let g:lightline = {
 " ap/vim-buftabline ++++++++++++++++++++++++++++++++++++++++++++++++
 set hidden
 nnoremap <F8> :bnext<CR>
-nnoremap <F7-tab> :bprev<CR>
+nnoremap <F7> :bprev<CR>
+nnoremap <F9> :bd<CR>
+nnoremap <C-n> :enew<CR>\t
 
 " clang-format +++++++++++++++++++++++++++++++++++++++++++++++++++++
 let g:clang_format#detect_style_file=1
@@ -146,15 +148,6 @@ nmap <F2> :w<CR>
 
 " in insert mode F2 will exit insert, save, enters insert again
 imap <F2> <ESC>:w<CR>i
-
-"Buffers"
-    "Create a new buffer"
-nnoremap <C-n> :enew<CR>\t
-    "Moving around"
-" nnoremap <F7> :bprevious<CR>
-" nnoremap <F8> :bnext<CR>
-    "Close Buffer"
-nnoremap <F9> :bd<CR>
 
 "Delete all trailing whitespaces
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
