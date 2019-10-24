@@ -4,7 +4,7 @@
 " Description: Optimized for C/C++ development
 " Author: Mikolaj Kaczmarek
 
-colorscheme *
+colorscheme abbott 
 
 " additional plugins
 
@@ -27,6 +27,7 @@ Plugin 'scrooloose/nerdcommenter' " comment tool ',cc' to comment; ',cu' uncomme
 Plugin 'terryma/vim-multiple-cursors' " C-n -> add cursor, A-n -> add cursor on all instances; c- change text, I- insert at start of range, A- insert at end of range
 Plugin 'mhinz/vim-grepper' " as name says - tool for grepping im vim
 Plugin 'itchyny/lightline.vim' " fancy statusline (NORMAL/INSERT etc)
+Plugin 'tpope/vim-repeat' " vim repeat (for vim-surround)
 Plugin 'tpope/vim-surround' "  wrap selected region in brackets
 Plugin 'airblade/vim-gitgutter' " indicating which lines changed in the file since last Git revision
 Plugin 'flazz/vim-colorschemes' " pack with schemes
@@ -119,6 +120,9 @@ set nocompatible
 " use indentation of previous line
 set autoindent
 
+" set relative number of line
+set relativenumber
+
 " use intelligent indentation for C
 set smartindent
 
@@ -149,6 +153,8 @@ set tags+=~/.vim/tags/gl
 set tags+=~/.vim/tags/sdl
 set tags+=~/.vim/tags/qt4
 
+set tags=tags;/
+
 " Enhanced keyboard mappings ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 " change leader key
@@ -159,14 +165,12 @@ map Y y$
 map D d$
 map C c$
 
-" in normal mode F2 will save the file
-nmap <S-W> :w<CR>
-
 " in insert mode F2 will exit insert, save, enters insert again
 imap <F2> <ESC>:w<CR>i
+nnoremap <F2> :w<CR>
 
 "Delete all trailing whitespaces
-nnoremap <silent> <F11> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 "Moving line"
     "With arrows"
