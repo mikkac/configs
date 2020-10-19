@@ -28,6 +28,8 @@ Plugin 'flazz/vim-colorschemes' " pack with schemes
 Plugin 'rhysd/vim-clang-format' " clang-format
 Plugin 'kien/ctrlp.vim' " fuzzy-finder + buffers
 Plugin 'mhinz/vim-grepper' " grep
+Plugin 'rust-lang/rust.vim' " grep
+Plugin 'fedorenchik/qt-support.vim'
 
 "bfrg/vim-cpp-modern" +++++++++++++++++++++++++++++++++++++++++++++++
 "
@@ -42,6 +44,9 @@ let g:ycm_global_ycm_extra_conf = '~/.config/nvim/.ycm_extra_conf.py'
 nnoremap <C-g> :YcmCompleter GoTo<CR>
 nnoremap <C-x> :YcmCompleter GoToReferences<CR>
 nnoremap <S-x> :YcmCompleter GoToInclude<CR>
+
+"rust-lang/rust.vim +++++++++++++++++++++++++++++++++++++++++++++++++
+let g:rustfmt_autosave = 1
 
 "scrooloose/nerdcommenter +++++++++++++++++++++++++++++++++++++++++++
 " Add spaces after comment delimiters by default
