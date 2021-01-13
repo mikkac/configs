@@ -30,6 +30,7 @@ Plugin 'kien/ctrlp.vim' " fuzzy-finder + buffers
 Plugin 'mhinz/vim-grepper' " grep
 Plugin 'rust-lang/rust.vim' " grep
 Plugin 'fedorenchik/qt-support.vim'
+Plugin 'Chiel92/vim-autoformat'
 
 "bfrg/vim-cpp-modern" +++++++++++++++++++++++++++++++++++++++++++++++
 "
@@ -75,6 +76,8 @@ let g:lightline = {
 
 " clang-format +++++++++++++++++++++++++++++++++++++++++++++++++++++
 let g:clang_format#detect_style_file=1
+let g:clang_format#auto_format=1
+
 nnoremap <F12> :<C-u>ClangFormat<CR>
 vnoremap <F12> :ClangFormat<CR>
 
@@ -86,6 +89,11 @@ nnoremap ' <ESC>:CtrlP<CR>
 " netrw
 let g:netrw_banner = 0
 nnoremap <C-n> <ESC>:Explore<CR>
+
+" python formatter
+let g:python3_host_prog='/usr/bin/python3.8'
+let g:formatterpath = ['/usr/bin/autopep8']
+nnoremap <F3> :Autoformat<CR>
 
 " Editor settings ++++++++++++++++++++++++++++++++++++++++++++++++++
 
