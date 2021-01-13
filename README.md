@@ -1,5 +1,3 @@
 # configs
 
-repo constists of two parts:
-* first -> my custom configs to apps like vim, zsh, tmux
-* second -> scripts that allow to install some specific software
+repo contains common apps' configs, like i3, alacritty and nvim
